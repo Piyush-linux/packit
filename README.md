@@ -1,4 +1,4 @@
-   <p align="center">
+<p align="center">
    <img src="logo.png" alt="" width="250" />
 </p>
 
@@ -26,14 +26,17 @@ Packit is a lightweight package manager written in Bash. It uses GitHub reposito
 
 ### Installation
 
-Clone this repository:
-
-```bash
-git clone https://github.com/user/packit.git
-cd packit
+```sh
+sudo wget https://raw.githubusercontent.com/Piyush-linux/packit/master/packit.sh -P /usr/local/bin 
 ```
 
+```sh
+sudo chmod +x /usr/local/bin/packit
+```
 
+```sh
+packit
+```
 ## Usage
 
 ### Commands
