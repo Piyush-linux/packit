@@ -27,17 +27,19 @@ Packit is a lightweight package manager written in Bash. It uses GitHub reposito
 ### Installation
 
 ```sh
-sudo wget https://raw.githubusercontent.com/Piyush-linux/packit/master/packit.sh -P /usr/local/bin 
+curl -s https://raw.githubusercontent.com/Piyush-linux/packit/refs/heads/master/setup.sh | bash -x
 ```
 
-```sh
-sudo chmod +x /usr/local/bin/packit
-```
+### Activate
+
+Add the below line and source your `.bashrc` / `.zshrc` file
 
 ```sh
-packit
+export PATH=$HOME/.local/bin/packit-scripts:$PATH
 ```
-## Usage
+```sh
+source ~/.bashrc
+```
 
 ### Commands
 
@@ -46,7 +48,7 @@ packit
 Installs a package by cloning its GitHub repository to a specified directory.
 
 ```bash
-packit.sh install <package_name>
+packit install <package_name>
 ```
 
 2. **Remove a Package**
@@ -54,24 +56,21 @@ packit.sh install <package_name>
 Removes a package from the installation directory.
 
 ```bash
-packit.sh remove <package_name>
+packit remove <package_name>
 ```
-
 
 3. **Update a Package**
 
 Pulls the latest changes from the GitHub repository.
 
 ```bash
-./packit.sh update <package_name>
+packit update <package_name>
 ```
 
 4. **List Available Packages**
 
-Lists all available packages from the `index.txt` file.
-
 ```bash
-./packit.sh list
+packit list
 ```
 
 

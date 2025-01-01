@@ -2,10 +2,10 @@
 
 # Packit Information
 VERSION="1.0.0"
-AUTHOR="Piyush Linux"
+AUTHOR="https://github.com/Piyush-Linux"
 
 # Global directory for Packit scripts
-GLOBAL_SCRIPT_DIR="/usr/local/bin/packit-scripts"
+GLOBAL_SCRIPT_DIR="$HOME/.local/bin/packit-scripts"
 
 # Function to display help
 show_help() {
@@ -25,8 +25,10 @@ show_help() {
 
 # Function to display version
 show_version() {
+    echo "   "
     echo "Packit Version: $VERSION"
     echo "Author: $AUTHOR"
+    echo "   " 
 }
 
 # Function to install a script globally using wget
@@ -85,7 +87,7 @@ list_scripts() {
 }
 
 # Exit if Ctrl+D (EOF) is pressed
-trap "echo 'Exiting...'; exit 0" EXIT
+trap "echo 'Goodbye!'; exit 0" SIGINT SIGTERM
 
 # Main logic
 case $1 in
@@ -101,7 +103,7 @@ case $1 in
     list)
         list_scripts
         ;;
-    version)
+    --version)
         show_version
         ;;
     help|*)
