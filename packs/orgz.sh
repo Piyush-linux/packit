@@ -1,8 +1,16 @@
 #!/bin/bash
-
-# Tidyup - File Organization Script
-# Author: Bossadi Zenith
-# Version: 1.0.0
+# =================================================================
+# Orgz - File Organization Script
+# =================================================================
+#
+# Author:          Piyush-linux
+# Version:         1.0.0
+# License:         MIT
+# GitHub:          https://github.com/Piyush-linux/packit/blob/master/packs/orgz.sh
+# 
+# Description:    Designed to organize files within a specified directory. 
+#                 You can organize files by extension, starting name, or creation date.
+# =================================================================
 
 set -e  # Exit on error
 set -u  # Exit on undefined variable
